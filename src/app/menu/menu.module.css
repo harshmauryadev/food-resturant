@@ -1,0 +1,144 @@
+.mainContent {
+  min-height: 100vh;
+  background-color: var(--bg-black);
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    margin-top: 70px;
+  }
+}
+
+.hero {
+  height: 50vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.heroImageContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.heroImageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  padding-left: var(--sidebar-width-desktop);
+}
+
+.heroTitle {
+  font-size: 5rem;
+  color: var(--text-white);
+  margin-top: 10px;
+}
+
+.menuPageSection {
+  background-color: var(--bg-dark);
+  padding: 100px 50px 100px calc(50px + var(--sidebar-width-desktop));
+  color: var(--text-white);
+}
+
+.categoryTitle {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  text-align: center;
+  color: var(--accent-gold);
+}
+
+.menuGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+}
+
+.menuItemHeader {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.menuItemHeader h3 {
+  font-size: 1.5rem;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.menuItemDots {
+  flex-grow: 1;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
+  margin: 0 15px;
+  position: relative;
+  top: -6px;
+}
+
+.menuItemPrice {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--accent-gold);
+}
+
+.menuItem {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.menuItemImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  border: 2px solid var(--accent-gold);
+}
+
+.menuItemImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menuItemContent {
+  flex-grow: 1;
+}
+
+.menuItem p {
+  color: var(--text-light-gray);
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .menuGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 3.5rem;
+  }
+  .heroContent, .menuPageSection {
+    padding-left: 20px;
+  }
+}

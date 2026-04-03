@@ -1,0 +1,26 @@
+.fadeIn {
+  opacity: 0;
+  transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: opacity, transform;
+}
+
+.translateUp {
+  transform: translateY(60px);
+}
+
+.translateDown {
+  transform: translateY(-60px);
+}
+
+.translateLeft {
+  transform: translateX(60px);
+}
+
+.translateRight {
+  transform: translateX(-60px);
+}
+
+.isVisible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
