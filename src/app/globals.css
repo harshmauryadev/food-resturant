@@ -78,8 +78,15 @@ a {
   background-color: var(--bg-black);
   padding: 80px 40px 40px calc(40px + var(--sidebar-width-desktop));
   text-align: center;
-  border-top: 1px solid rgba(255,255,255,0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 60px 20px 40px 20px;
+  }
+}
+
 
 .footerLogo {
   font-family: var(--font-serif);
@@ -98,7 +105,15 @@ a {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.8rem;
+  flex-wrap: wrap;
 }
+
+@media (max-width: 480px) {
+  .footerLinks {
+    gap: 20px;
+  }
+}
+
 
 .footerLinks a:hover {
   color: var(--accent-gold);

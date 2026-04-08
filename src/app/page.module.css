@@ -19,6 +19,13 @@
   padding-left: var(--sidebar-width-desktop);
 }
 
+@media (max-width: 1024px) {
+  .splitSectionDark {
+    padding-left: 0;
+  }
+}
+
+
 .splitImage {
   flex: 1;
   position: relative;
@@ -94,6 +101,13 @@
   padding-left: var(--sidebar-width-desktop);
 }
 
+@media (max-width: 1024px) {
+  .splitSectionLight {
+    padding-left: 0;
+  }
+}
+
+
 .splitSectionLight .splitContent {
   padding: 100px 80px;
 }
@@ -130,6 +144,13 @@
   width: 100%;
   padding-left: var(--sidebar-width-desktop);
 }
+
+@media (max-width: 1024px) {
+  .gallerySection {
+    padding-left: 0;
+  }
+}
+
 
 .galleryItem {
   flex: 1;
@@ -178,6 +199,13 @@
   color: var(--text-white);
 }
 
+@media (max-width: 1024px) {
+  .menuSection {
+    padding: 80px 20px;
+  }
+}
+
+
 .menuHeader {
   text-align: center;
   margin-bottom: 60px;
@@ -187,6 +215,15 @@
   font-size: 4rem;
   margin-top: 10px;
 }
+
+@media (max-width: 768px) {
+  .splitContent h2,
+  .splitSectionLight h2,
+  .menuHeader h2 {
+    font-size: 2.5rem;
+  }
+}
+
 
 .menuGrid {
   display: flex;
@@ -276,6 +313,13 @@
   overflow: hidden;
   background-color: var(--bg-black);
 }
+
+@media (max-width: 1024px) {
+  .testimonialsSection {
+    padding: 100px 20px;
+  }
+}
+
 
 .testimonialBackground {
   position: absolute;
