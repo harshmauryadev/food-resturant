@@ -241,20 +241,6 @@ export default function Home() {
             </FadeIn>
           </div>
         </section>
-
-        {/* Footer */}
-        <footer className={styles.footer}>
-          <FadeIn>
-            <div className={styles.footerLogo}>CC</div>
-            <div className={styles.footerLinks}>
-              <a href="/">Home</a>
-              <a href="/about">About</a>
-              <a href="/menu">Menu</a>
-              <a href="/contact">Contact</a>
-            </div>
-            <p className={styles.footerCopy}>© 2026 Chatori Chowk. All rights reserved.</p>
-          </FadeIn>
-        </footer>
       </main>
     </>
   );

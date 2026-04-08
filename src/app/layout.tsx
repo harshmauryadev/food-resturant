@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Lato } from "next/font/google";
 import "./globals.css";
+import FadeIn from "../components/FadeIn";
 
 const cormorant = Cormorant_Garamond({
   weight: ['400', '500', '600', '700'],
@@ -29,7 +30,22 @@ export default function RootLayout({
       lang="en"
       className={`${cormorant.variable} ${lato.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        {/* Footer */}
+        <footer className="footer">
+          <FadeIn>
+            <div className="footerLogo">CC</div>
+            <div className="footerLinks">
+              <a href="/">Home</a>
+              <a href="/about">About</a>
+              <a href="/menu">Menu</a>
+              <a href="/contact">Contact</a>
+            </div>
+            <p className="footerCopy">© 2026 Chatori Chowk. All rights reserved.</p>
+          </FadeIn>
+        </footer>
+      </body>
     </html>
   );
 }

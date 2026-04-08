@@ -321,39 +321,3 @@
     font-size: 2rem;
   }
 }
-
-/* Footer Section */
-.footer {
-  background-color: var(--bg-black);
-  padding: 80px 40px 40px calc(40px + var(--sidebar-width-desktop));
-  text-align: center;
-  border-top: 1px solid rgba(255,255,255,0.05);
-}
-
-.footerLogo {
-  font-family: var(--font-serif);
-  font-size: 3rem;
-  font-style: italic;
-  font-weight: 700;
-  margin-bottom: 40px;
-}
-
-.footerLinks {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-bottom: 40px;
-  font-family: var(--font-sans);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.8rem;
-}
-
-.footerLinks a:hover {
-  color: var(--accent-gold);
-}
-
-.footerCopy {
-  color: var(--text-light-gray);
-  font-size: 0.9rem;
-}
