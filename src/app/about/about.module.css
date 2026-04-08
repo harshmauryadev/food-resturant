@@ -9,6 +9,7 @@
   }
 }
 
+/* ─── Hero ─────────────────────────────────────────── */
 .hero {
   height: 60vh;
   position: relative;
@@ -22,18 +23,8 @@
 
 .heroImageContainer {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   z-index: 1;
-}
-
-.heroImageContainer img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.5;
 }
 
 .heroContent {
@@ -54,13 +45,14 @@
   color: var(--text-white);
 }
 
+/* ─── Content (text + image side-by-side) ──────────── */
 .contentSection {
   padding: 100px 50px 100px calc(50px + var(--sidebar-width-desktop));
   display: flex;
+  gap: 80px;
+  align-items: center;
   background-color: var(--bg-dark);
   color: var(--text-white);
-  gap: 60px;
-  align-items: center;
 }
 
 .contentText {
@@ -77,23 +69,29 @@
   color: var(--text-light-gray);
   line-height: 1.8;
   margin-bottom: 20px;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
+}
+
+/* The image container on the right */
+/* FadeIn renders a div wrapper — give it proper sizing */
+.contentSection > div:last-child {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  min-height: 400px;
 }
 
 .contentImage {
   flex: 1;
-  position: relative;
-  height: 500px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.contentImage img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  position: relative;
+  height: 550px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
+/* ─── Team ─────────────────────────────────────────── */
 .teamSection {
   padding: 100px 50px 100px calc(50px + var(--sidebar-width-desktop));
   background-color: var(--bg-black);
@@ -121,15 +119,10 @@
 
 .memberImage {
   width: 100%;
-  height: 400px;
+  height: 380px;
   position: relative;
   margin-bottom: 20px;
-}
-
-.memberImage img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  overflow: hidden;
 }
 
 .teamMember h3 {
@@ -139,22 +132,94 @@
 
 .teamMember p {
   color: var(--accent-gold);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
+/* ─── Responsive ────────────────────────────────────── */
 @media (max-width: 1024px) {
   .contentSection {
     flex-direction: column;
+    padding: 70px 30px;
+    gap: 40px;
   }
+
+  /* FadeIn wrapper must also be full width on tablet/mobile */
+  .contentSection > div:last-child {
+    flex: unset;
+    width: 100%;
+    min-height: 450px;
+  }
+
+  .contentImage {
+    width: 100%;
+    height: 100%;
+    min-height: 450px;
+  }
+
   .teamGrid {
-    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .teamMember {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  .teamSection {
+    padding: 80px 30px;
   }
 }
 
 @media (max-width: 768px) {
   .heroTitle {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
-  .heroContent, .contentSection, .teamSection {
+
+  .heroContent {
     padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .contentSection {
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  .contentText h2 {
+    font-size: 2.2rem;
+  }
+
+  /* Force FadeIn wrapper to take space on mobile */
+  .contentSection > div:last-child {
+    width: 100%;
+    min-height: 320px;
+  }
+
+  .contentImage {
+    width: 100%;
+    height: 320px;
+    min-height: 320px;
+  }
+
+  .teamSection {
+    padding: 50px 20px;
+  }
+
+  .teamSection h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+
+  .teamGrid {
+    flex-direction: column;
+  }
+
+  .teamMember {
+    flex: 1 1 100%;
+  }
+
+  .memberImage {
+    height: 260px;
   }
 }
